@@ -1,0 +1,12 @@
+.row
+  %h2
+    Last  3 tweets #{ @nickname }
+
+  .jumbotron
+    %ul.list-unstyled.text-gris.small
+      - @search.each  do |tweet|
+        %li
+          %span.text-info>
+            \  #{tweet.text}
+          %span.text-gris-oscuro
+            = time_ago_in_words(tweet.created_at)
