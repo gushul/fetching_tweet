@@ -1,6 +1,13 @@
 class HomeController < ApplicationController
   def index
-
+    if params[:tweet_text]
+      unless params[:tweet_text].blank?
+        $twitter.update(params[:tweet_text])
+        flash[:notice] ='Great, user gushulo successful tweet'
+      else
+        flash[:notice] = 'Please write tweet text'
+      end
+    end
   end
 
   def tweets
