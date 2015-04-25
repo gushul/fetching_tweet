@@ -1,3 +1,8 @@
 .jumbotron
   %h3
     Get tweet
+
+  = form_tag tweets_path, :method => 'get' do
+    = label_tag 'Please set twitter nickname'
+    = text_field_tag :nickname
+    = submit_tag 'GET'
