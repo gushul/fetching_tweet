@@ -1,3 +1,8 @@
 .jumbotron
   %h3
     Post tweet
+
+  = form_tag root_path, :method => 'get' do
+    = label_tag 'Please set tweet text'
+    = text_field_tag :tweet_text
+    = submit_tag 'POST'
