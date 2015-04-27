@@ -1,10 +1,10 @@
 .row
   %h2
-    Last  3 tweets #{ @nickname }
+    Tweets #{ @nickname }
 
   .jumbotron
     %ul.list-unstyled.text-gris.small
-      - @search.each  do |tweet|
+      - @tweets.each  do |tweet|
         %li
           %span.text-info>
             \  #{tweet.text}

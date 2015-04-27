@@ -16,12 +16,13 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'dotenv-rails', '~> 2.0.1'
 
 gem 'sidekiq'
+gem 'foreman'
 
 gem 'twitter'
 
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
-  gem 'factory_girl_rails'
   gem 'capybara'
   gem 'selenium-webdriver'
 end

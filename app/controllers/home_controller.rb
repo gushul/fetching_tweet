@@ -13,10 +13,21 @@ class HomeController < ApplicationController
   def tweets
     unless params[:nickname].blank?
       @nickname = params[:nickname]
-      options = {:count => 3, :include_rts => true}
-      @search  = $twitter.user_timeline(@nickname, options)
     else
       redirect_to root_path, notice: 'Please set twitter name'
     end
+
+    if check_twitter_name(@nickname)
+      TweetsWorker.perform_async(@nickname)
+    else
+      redirect_to root_path, notice: 'Please set correct twitter name'
+    end
+    @tweets = FetchTweet.names(@nickname)
+  end
+
+
+private
+  def check_twitter_name(nickname)
+    TwitterNameWorker.perform_async(nickname)
   end
 end
