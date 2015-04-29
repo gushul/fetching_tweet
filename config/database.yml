@@ -15,7 +15,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: twt_production
+  database: production
   pool: 5
   username: deployer
   password: <%= ENV["db_key"] %>
