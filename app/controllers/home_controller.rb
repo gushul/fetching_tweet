@@ -13,10 +13,16 @@ class HomeController < ApplicationController
   def tweets
     unless params[:nickname].blank?
       @nickname = params[:nickname]
-      options = {:count => 3, :include_rts => true}
-      @search  = $twitter.user_timeline(@nickname, options)
     else
       redirect_to root_path, notice: 'Please set twitter name'
     end
+
+    if $twitter.user?(@nickname)
+      @tweets = FetchTweet.names(@nickname)
+      @tweets = FetchTweet.fetch_all_tweets(@nickname) if @tweets.empty?
+    else
+      redirect_to root_path, notice: 'Please set correct twitter name'
+    end
+
   end
 end
