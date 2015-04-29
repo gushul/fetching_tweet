@@ -42,7 +42,7 @@ group :development do
   gem 'capistrano3-nginx'
   gem 'capistrano-rvm'
   gem 'capistrano-sidekiq'
-  gem 'capistrano-figaro-yml', '~> 1.0.2'
+  gem 'capistrano-figaro-yml', '~> 1.0.1'
 end
 
 group :test do
