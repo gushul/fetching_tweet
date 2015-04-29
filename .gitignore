@@ -16,8 +16,8 @@
 /tmp
 
 /dump.rdb
-/config/database.yml
-/config/initializers/twitter.rb
 
 # Ignore application configuration
 /config/application.yml
+
+/config/deploy/*

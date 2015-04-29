@@ -33,8 +33,22 @@ end
 group :development do
   gem 'spring'
   gem 'spring-commands-rspec'
+
+  gem 'capistrano'
+  gem 'capistrano3-ubuntu-server-prepare'
+  gem 'capistrano-rails'
+  gem 'capistrano-bundler'
+  gem 'capistrano3-unicorn'
+  gem 'capistrano3-nginx'
+  gem 'capistrano-rvm'
+  gem 'capistrano-sidekiq'
+  gem 'capistrano3-foreman'
 end
 
 group :test do
   gem 'shoulda-matchers', require: false
+end
+
+group :production do
+    gem 'unicorn'
 end
