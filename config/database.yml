@@ -4,18 +4,18 @@ development:
   database: tweet_dev
   pool: 5
   username: oleg
-  password: ENV["db_key"]
+  password: <%= ENV["db_key"] %>
 test:
   adapter: postgresql
   encoding: unicode
   database: tweet_test
   pool: 5
   username: oleg
-  password: ENV["db_key"]
+  password: <%= ENV["db_key"] %>
 production:
   adapter: postgresql
   encoding: unicode
   database: tweet_production
   pool: 5
   username: deployer
-  password: ENV["db_key"]
+  password: <%= ENV["db_key"] %>

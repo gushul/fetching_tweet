@@ -31,23 +31,12 @@ namespace :deploy do
     end
   end
   task :restart do
+    'unicorn:reload'
+    'unicorn:restart'
+    'unicorn:duplicate'
+    'sidekiq:stop'
+    'sidekiq:start'
   end
 end
 
-namespace :sitemaps do
-  desc 'Generate sitemap'
-  task :generate do
-    on roles(:app) do
-      within release_path do
-        with rails_env: :production do
-          execute :rake, 'sitemap:generate'
-        end
-      end
-    end
-  end
-end
-after 'deploy', 'sitemaps:generate'
 after 'deploy', 'deploy:restart'
-after 'deploy:restart', 'unicorn:reload'    # app IS NOT preloaded
-after 'deploy:restart', 'unicorn:restart'   # app preloaded
-after 'deploy:restart', 'unicorn:duplicate' # before_fork hook implemented (zero downtime
