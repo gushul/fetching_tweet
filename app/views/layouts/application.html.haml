@@ -24,7 +24,7 @@
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          = link_to "Project name", "#", :class => "navbar-brand"
+          = link_to "Project name", root_path, :class => "navbar-brand"
         #navbar.collapse.navbar-collapse
           %ul.nav.navbar-nav
             %li.active
@@ -32,7 +32,7 @@
       - flash.each do |name, msg|
         = content_tag :div, :class => "alert alert-#{name == :error ? "danger" : "success" } alert-dismissable", :role => "alert" do
           %button.close{:type => "button", :data => {:dismiss => "alert"} }
-            span{:aria => {:hidden => "true"} } &times;
-            span.sr-only Close
+            %span{:aria => {:hidden => "true"} } &times;
+            %span.sr-only Close
           = msg
       = yield
