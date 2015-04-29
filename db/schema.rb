@@ -13,10 +13,13 @@
 
 ActiveRecord::Schema.define(version: 20150427113632) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "fetch_tweets", force: true do |t|
     t.text     "text"
     t.string   "name"
-    t.integer  "twitter_id"
+    t.integer  "twitter_id", limit: 8
     t.datetime "created_at"
     t.datetime "updated_at"
   ***REMOVED***

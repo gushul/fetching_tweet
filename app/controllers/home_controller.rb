@@ -17,17 +17,12 @@ class HomeController < ApplicationController
       redirect_to root_path, notice: 'Please set twitter name'
     ***REMOVED***
 
-    if check_twitter_name(@nickname)
-      TweetsWorker.perform_async(@nickname)
+    if $twitter.user?(@nickname)
+      @tweets = FetchTweet.names(@nickname)
+      @tweets = FetchTweet.fetch_all_tweets(@nickname) if @tweets.empty?
     else
       redirect_to root_path, notice: 'Please set correct twitter name'
     ***REMOVED***
-    @tweets = FetchTweet.names(@nickname)
-  ***REMOVED***
 
-
-private
-  def check_twitter_name(nickname)
-    TwitterNameWorker.perform_async(nickname)
   ***REMOVED***
 ***REMOVED***

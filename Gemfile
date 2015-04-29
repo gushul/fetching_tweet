@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '4.1.6'
-gem 'sqlite3'
+gem 'pg'
 gem 'sass-rails', '~> 4.0.3'
 gem 'bootstrap-sass', '~> 3.3.4'
 gem 'bootstrap-generators', '~> 3.3.1'
@@ -15,8 +15,10 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'dotenv-rails', '~> 2.0.1'
 
-gem 'sidekiq'
 gem 'foreman'
+gem 'sidekiq'
+gem 'sinatra', require: false
+gem 'slim'
 
 gem 'twitter'
 

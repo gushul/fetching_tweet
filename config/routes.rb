@@ -3,9 +3,11 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
+  require 'sidekiq/web'
   root 'home#index'
 
   get 'tweets' => "home#tweets"
+  mount Sidekiq::Web, at: '/sidekiq'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
