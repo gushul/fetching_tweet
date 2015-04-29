@@ -5,5 +5,5 @@ class TweetSaveWorker
   def perform(tweet)
     puts tweet['text']
     FetchTweet.create!(text: tweet['text'], twitter_id: tweet['tweet_id'], name: tweet['twitter_name'])
-  ***REMOVED***
-***REMOVED***
+  end
+end

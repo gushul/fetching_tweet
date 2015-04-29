@@ -20,7 +20,7 @@ Rails.application.configure do
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
 
-  # Raise exceptions instead of r***REMOVED***ering exception templates.
+  # Raise exceptions instead of rendering exception templates.
   config.action_dispatch.show_exceptions = false
 
   # Disable request forgery protection in test environment.
@@ -36,4 +36,4 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
-***REMOVED***
+end

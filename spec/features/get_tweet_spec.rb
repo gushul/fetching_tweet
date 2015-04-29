@@ -4,14 +4,14 @@ feature 'Get tweets' do
 
   before(:each) do
     visit root_path
-  ***REMOVED***
+  end
 
   scenario 'Get 3 tweets when set nickname' do
     fill_in 'nickname', with: 'newrelic'
     click_button 'GET'
 
     expect(page).to have_content 'newrelic'
-  ***REMOVED***
+  end
 
   scenario 'Error without nickname' do
     fill_in 'nickname', with: ''
@@ -19,6 +19,6 @@ feature 'Get tweets' do
 
     expect(page).to have_content "Get tweet"
     expect(page).to have_text 'Please set twitter name'
-  ***REMOVED***
+  end
 
-***REMOVED***
+end

@@ -34,9 +34,9 @@ Rails.application.configure do
 
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
-  # Specifies the header that your server uses for s***REMOVED***ing files.
-  # config.action_dispatch.x_s***REMOVED***file_header = "X-S***REMOVED***file" # for apache
-  # config.action_dispatch.x_s***REMOVED***file_header = 'X-Accel-Redirect' # for nginx
+  # Specifies the header that your server uses for sending files.
+  # config.action_dispatch.x_sendfile_header = "X-Sendfile" # for apache
+  # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for nginx
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
@@ -44,7 +44,7 @@ Rails.application.configure do
   # Set to :debug to see everything in the log.
   config.log_level = :info
 
-  # Prep***REMOVED*** all log lines with the following tags.
+  # Prepend all log lines with the following tags.
   # config.log_tags = [ :subdomain, :uuid ]
 
   # Use a different logger for distributed setups.
@@ -64,7 +64,7 @@ Rails.application.configure do
   # the I18n.default_locale when a translation cannot be found).
   config.i18n.fallbacks = true
 
-  # S***REMOVED*** deprecation notices to registered listeners.
+  # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
 
   # Disable automatic flushing of the log to improve performance.
@@ -75,4 +75,4 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-***REMOVED***
+end

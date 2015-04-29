@@ -16,6 +16,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'dotenv-rails', '~> 2.0.1'
 
 gem 'foreman'
+gem "figaro"
 gem 'sidekiq'
 gem 'sinatra', require: false
 gem 'slim'
@@ -27,13 +28,13 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
   gem 'capybara'
   gem 'selenium-webdriver'
-***REMOVED***
+end
 
 group :development do
   gem 'spring'
   gem 'spring-commands-rspec'
-***REMOVED***
+end
 
 group :test do
   gem 'shoulda-matchers', require: false
-***REMOVED***
+end

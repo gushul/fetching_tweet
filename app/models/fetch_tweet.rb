@@ -8,21 +8,21 @@ class FetchTweet < ActiveRecord::Base
     tweets.each do |tweet|
       tweet = { text: tweet.text, twitter_name: twitter_name, tweet_id: tweet.id }
       TweetSaveWorker.perform_async(tweet)
-    ***REMOVED***
-  ***REMOVED***
+    end
+  end
 
 private
   def collect_with_max_id(collection=[], max_id=nil, &block)
     response = yield(max_id)
     collection += response
     response.empty? ? collection.flatten : collect_with_max_id(collection, response.last.id - 1, &block)
-  ***REMOVED***
+  end
 
   def $twitter.get_all_tweets(user)
     collect_with_max_id do |max_id|
       options = {count: 200, include_rts: true}
       options[:max_id] = max_id unless max_id.nil?
       user_timeline(user, options)
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED***
+    end
+  end
+end

@@ -214,8 +214,8 @@ $input-height-large:             (ceil($font-size-large * $line-height-large) + 
 //** Small `.form-control` height
 $input-height-small:             (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 2) !default;
 
-$leg***REMOVED***-color:                   $gray-dark !default;
-$leg***REMOVED***-border-color:            #e5e5e5 !default;
+$legend-color:                   $gray-dark !default;
+$legend-border-color:            #e5e5e5 !default;
 
 //** Background color for textual input addons
 $input-group-addon-bg:           $gray-lighter !default;
@@ -264,7 +264,7 @@ $dropdown-caret-color:           #000 !default;
 //-- Z-index master list
 //
 // Warning: Avoid customizing these values. They're used for a bird's eye view
-// of components dep***REMOVED***ent on the z-axis and are designed to all work together.
+// of components dependent on the z-axis and are designed to all work together.
 //
 // Note: These variables are not generated into the Customizer.
 

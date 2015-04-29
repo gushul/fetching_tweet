@@ -23,31 +23,31 @@ Rails.application.routes.draw do
   #     member do
   #       get 'short'
   #       post 'toggle'
-  #     ***REMOVED***
+  #     end
   #
   #     collection do
   #       get 'sold'
-  #     ***REMOVED***
-  #   ***REMOVED***
+  #     end
+  #   end
 
   # Example resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales
   #     resource :seller
-  #   ***REMOVED***
+  #   end
 
   # Example resource route with more complex sub-resources:
   #   resources :products do
   #     resources :comments
   #     resources :sales do
   #       get 'recent', on: :collection
-  #     ***REMOVED***
-  #   ***REMOVED***
+  #     end
+  #   end
 
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'
-  #   ***REMOVED***
+  #   end
   #   resources :posts, concerns: :toggleable
   #   resources :photos, concerns: :toggleable
 
@@ -56,5 +56,5 @@ Rails.application.routes.draw do
   #     # Directs /admin/products/* to Admin::ProductsController
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
-  #   ***REMOVED***
-***REMOVED***
+  #   end
+end

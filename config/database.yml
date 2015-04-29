@@ -1,21 +1,21 @@
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
-  password: 664578
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
-  password: 664578
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
-  password: 66457866
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: tweet_dev
+  pool: 5
+  username: oleg
+  password: ENV["db_key"]
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: tweet_test
+  pool: 5
+  username: oleg
+  password: ENV["db_key"]
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: tweet_production
+  pool: 5
+  username: deployer
+  password: ENV["db_key"]

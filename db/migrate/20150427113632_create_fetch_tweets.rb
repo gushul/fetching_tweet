@@ -6,6 +6,6 @@ class CreateFetchTweets < ActiveRecord::Migration
       t.column :twitter_id, :bigint
 
       t.timestamps
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED***
+    end
+  end
+end
