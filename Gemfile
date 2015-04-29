@@ -16,6 +16,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'dotenv-rails', '~> 2.0.1'
 
 gem 'foreman'
+gem "figaro"
 gem 'sidekiq'
 gem 'sinatra', require: false
 gem 'slim'
