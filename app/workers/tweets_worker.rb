@@ -2,9 +2,12 @@ class TweetsWorker
   include Sidekiq::Worker
 
   def perform(twitter_name)
-    tweets = $twitter.user_timeline("#{twitter_name}")
+    tweets = $twitter.get_all_tweets("#{twitter_name}")
+
     tweets.each do |tweet|
-      FetchTweet.create!(text: tweet.text, twitter_id: tweet.id, name: twitter_name)
+      tweet = { text: tweet.text, twitter_name: twitter_name, tweet_id: tweet.id }
+      # tweet = tweet.to_json
+      TweetSaveWorker.perform_async(tweet)
     end
   end
 

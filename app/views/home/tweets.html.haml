@@ -1,12 +1,7 @@
 .row
   %h2
     Tweets #{ @nickname }
-
   .jumbotron
     %ul.list-unstyled.text-gris.small
-      - @tweets.each  do |tweet|
-        %li
-          %span.text-info>
-            \  #{tweet.text}
-          %span.text-gris-oscuro
-            = time_ago_in_words(tweet.created_at)
+      #tweets
+        = render 'shared/fetch_tweet'
